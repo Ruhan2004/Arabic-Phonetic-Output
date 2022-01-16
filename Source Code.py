@@ -238,9 +238,10 @@ def english_to_arabic(inp):
             if ginipig not in ['l','n','m','w']:
                 arabic += 'ْ' # জযম
             elif ginipig == 'l':
-                qamariyya = ['b','g','H','j','k','w','Q','f','`','q','K','\'','y','m','h',' ']
-                if next in qamariyya or (next == ' ' and next2 in qamariyya) or next in ['','\n']:
-                        arabic += 'ْ' # জযম
+                qamariyya = ['b','g','H','j','k','w','Q','f','`','q','K','\'','y','m','h']
+                 #shamsiyya = ['t','c','d','z','r','Z','s','S','C','D',   'J','l','n']
+                if next in qamariyya or (next == ' ' and (next2 in qamariyya or next2 in ['',' ','\n'])) or next in ['','\n']:
+                    arabic += 'ْ' # জযম
                 else:
                     arabic += ''
             elif ginipig == 'n':
