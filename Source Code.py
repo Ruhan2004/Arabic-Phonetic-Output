@@ -199,7 +199,7 @@ def english_to_arabic(inp):
             arabic += 'ى'
         
         elif ginipig == 'a':
-            if (prev in ['',' ','\n'] and next != '~') or (arabic_prev == 'ِ' and arabic_prev2 == 'ب') or (arabic_prev == 'َ' and arabic_prev2 == 'ف'):
+            if (prev in ['',' ','\n'] and next != '~') or (arabic_prev == 'ِ' and arabic_prev2 == 'ب') or (arabic_prev == 'َ' and arabic_prev2 == 'ف' and prev3 != 'l'):
                 arabic += 'ٱ'
             else:
                 arabic += 'ا'
